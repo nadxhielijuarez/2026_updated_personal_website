@@ -30,8 +30,8 @@ body{
 }
 
 .timeTitle{
-	font-family: 'Cormorant Garamond', serif
-	font-weight:600;
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 600;
 	font-size:25px;
 	text-align:center;
 	margin-right:3%;
@@ -145,7 +145,7 @@ body{
 @media(min-width: 600px) and (max-width: 1290px){
 
     .timeTitle{
-	font-family: 'Cormorant Garamond', serif
+	font-family: 'Cormorant Garamond', serif;
 	font-weight:600;
 	font-size:25px;
 	text-align:center;
