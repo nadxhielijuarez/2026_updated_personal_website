@@ -1,11 +1,14 @@
+import {Link} from "react-router-dom"
+
+
 export default function Navbar() {
     return <div className="topnav" id="myTopnav">
 
-      <a href = "/home"> Home</a>    
-        <a href ="/Resume">Resume</a> 
-        <a href ="/hobbies">Activities/Hobbies</a>
-        <a href ="/Projects" > My Projects</a>
-        <a href ="/ProgrammingLanguage">Programming Languages</a> 
+      <Link to="/home"> Home</Link>    
+        <Link to="/Resume">Resume</Link> 
+        <Link to="/hobbies">Activities/Hobbies</Link>
+        <Link to="/Projects" > My Projects</Link>
+        <Link to="/ProgrammingLanguage">Programming Languages</Link> 
         <a href="javascript:void(0);" className="icon" onclick="myFunction()">
             <i className="Navbar"></i>  </a>          
     </div> 
