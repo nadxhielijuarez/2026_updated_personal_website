@@ -1,3 +1,6 @@
+# Personal Website
+### simple personal website public repo, AWS hosting
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
