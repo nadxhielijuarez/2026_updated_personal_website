@@ -10,7 +10,7 @@ export default function SquareSection({
 }) {
   return (
     <section className={sectionClass} id="ScrollSection">
-      <div className="row">
+      <div className="SquareSectionRow">
         <div className="column" id="LeftPhoto">
           <div className="SectionTitles">
             {title}
