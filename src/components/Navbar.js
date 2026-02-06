@@ -9,6 +9,7 @@ export default function Navbar() {
         <Link to="/hobbies">Activities/Hobbies</Link>
         <Link to="/Projects" > My Projects</Link>
         <Link to="/ProgrammingLanguage">Programming Languages</Link> 
+        <Link to="/LearningBlog">Learning Blog</Link>
         <a href="javascript:void(0);" className="icon" onclick="myFunction()">
             <i className="Navbar"></i>  </a>          
     </div> 
