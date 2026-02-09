@@ -1,33 +1,27 @@
-import Button from './Button';
+import {Link} from "react-router-dom"
 
 export default function SquareSection({ 
   sectionClass, 
   title, 
-  subtitle, 
-  buttonText, 
-  buttonLink, 
-  children 
+  linkPage
 }) {
   return (
     <section className={sectionClass} id="ScrollSection">
-      <div className="SquareSectionRow">
-        <div className="column" id="LeftPhoto">
-          <div className="SectionTitles">
-            {title}
-          </div>
-          
-          <div className="Sectionsub-paragraphs">
-            {subtitle}
-          </div>
-          <Button text={buttonText} link={buttonLink} />
-        </div>
+        <Link to={linkPage}>
+            <div className="SquareSectionRow">
+                <div className="column" id="LeftPhoto">
+                    <div className="SectionTitles">
+                    {title}
+                    </div>
+            
+                </div>
         
-        <div className="column">
-          <p></p>
-        </div>
-      </div>
+                <div className="column">
+                <p></p>
+                </div>
+            </div>
 
-      {children && <div>{children}</div>}
+    </Link>
     </section>
   );
 }

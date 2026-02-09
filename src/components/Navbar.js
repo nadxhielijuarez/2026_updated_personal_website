@@ -6,7 +6,6 @@ export default function Navbar() {
 
       <Link to="/home"> Home</Link>    
         <Link to="/Resume">Resume</Link> 
-        <Link to="/hobbies">Activities/Hobbies</Link>
         <Link to="/Projects" > My Projects</Link>
         <Link to="/ProgrammingLanguage">Programming Languages</Link> 
         <Link to="/LearningBlog">Learning Blog</Link>

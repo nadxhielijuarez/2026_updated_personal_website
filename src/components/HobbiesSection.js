@@ -1,7 +1,7 @@
 import Hobbie from '../components/Hobbie';
 
 export default function HobbiesSection(){
-    return <section id="SquareTitle" id= "ScrollSection">
+    return <section id="HobbiesSection">
     
             <div className="CenteredTitles" id= "Hobbie">
             
@@ -19,7 +19,7 @@ export default function HobbiesSection(){
                 />
 
                 <Hobbie
-                    title="Strength Training"
+                    title="Fitness"
                     subtitle="I really enjoy working out, its a great way to de-stress after a long day."
                     thumbnail="https://img.icons8.com/ios-glyphs/90/dumbbell.png"
                 />
