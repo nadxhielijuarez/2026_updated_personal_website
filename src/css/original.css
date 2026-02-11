@@ -1,14 +1,16 @@
-body{
-	margin:0;
-	perspective: 1px;
-	transform-style: preserve-3d;
-	overflow-x: hidden;
-	overflow-y: auto;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-}
+@font-face {
+    font-family: 'Gallient';
+    src: url('../fonts/GallientRegular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+
 .topnav{
 	overflow:hidden;
-	background-color:#8a706f;
+	background-color:#592A2A;
+	margin-bottom: 2%;
 }
 
 
@@ -30,13 +32,13 @@ a{
 	font-size: 12px;
 }
 .topnav a:hover {
-  background-color: #ebe2da;
+  background-color: #874f4f;
   color: white;
 }
 
 .topnav a.active {
-  background-color: #ebe2da;
-  color: #6D2E46;
+  background-color: #874f4f;
+  color: #592A2A;
 }
 
 .topnav .icon {
@@ -47,8 +49,6 @@ a{
 .vertical-line{
 	border-left: 5px solid black;
 	display: block;
-	
-
 }
 
 h1{
@@ -77,34 +77,15 @@ h3{
 	font-family: 'Poppins', sans-serif;
 }
 
-
-
 h4{
 	text-align:center;
 	background-color:#6D2E46;
 	color:white;
 	font-family: 'Poppins', sans-serif;
-	
-	
-}
-
-p{
-	color: white;
-	font-family:"Roboto";
-	font-weight:500;
-	font-size: 15px;
-}
-
-button{
-	background-color:#ded7cc78;
-	border: 2px solid #adadadad;
-	border-radius: 5px;
-	color: #eee;
-	font-family:'Poppins', sans-serif;
-	font-size:15px;
 }
 
 .intro{
+	text-align: left;
 	margin-top:70px;
 	margin-left:50px;
 	font-size: large;
@@ -112,8 +93,13 @@ button{
 	font-family: 'Roboto';
 }
 
+.arrowContainer{
+	display:relative;
+	margin-top: 0px;
+	margin-left:0px;
+}
+
 .downArrow{
-	margin-left: 50%;
 	height: 200px;
 }
 
@@ -121,32 +107,26 @@ button{
 #HeadingContain{
 	display:table-cell;
 	verticle-align:middle;
-	left:50px;
+	left: 50px;
 	position:relative;	
 	min-height:400px;
 }
 
-
-
-
-.SquareTitlebefore{
-	transform-style:preserve-3d;
-	transform: translateZ(0px);
-    animation: animateZ 5s infinite;
+.IntroImg{
+	height: 800px;
+	margin-left: 15%;
 }
 
 #SquareTitle{
 	position:relative;
 	height:auto;
 	width:100%;
-	background-color:#CEBEBE;
+	background-color:#FFFFFF;
 	text-align:center;
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
 	justify-items:center;
-
-	
 }
 
 .HobbiesRow{
@@ -165,6 +145,7 @@ button{
 }
 
 .SquareTitle-1{
+	height:20px;
 	position: relative;
 	perspective: 8px;
 	perspective-origin:0%;
@@ -181,12 +162,15 @@ button{
 	margin-top:50px;	
 	background-size:cover;
 	background-attachment:fixed;
-	
+
+	border-radius: 30%;
 }
+
+
 .SquareSectionRow{
 	display:flex;
-	margin-bottom: 0px;
 	height:500px;
+	border-radius: 50%;
 }
 
 #LeftPhoto{
@@ -208,27 +192,24 @@ button{
 }
 .SectionTitles{
 	color: #adadad;
-	font-family: 'Merriweather', serif;
+	font-family: "Gallient";
 	font-size:60px;
 	text-align: center;
 	margin-top:20%;
 	font-weight: 200;
-	text-decoration:underline;
 }
 
 .CenteredTitles{
 	color: #545252;
-	font-family: 'Merriweather', serif;
+	font-family: "Old Standard TT", serif;
 	font-size:50px;
 	text-align: center;
 	font-weight: 200;
-	text-decoration:underline;
-
 }
 
-.Sectionsub-paragraphs{
+.HobbySection-paragraphs{
 color: rgb(100, 96, 96);
-font-family:"Roboto";
+font-family: "Quicksand", sans-serif;
 font-weight:500;
 font-size: 15px;
 margin: 10px;
@@ -252,20 +233,19 @@ margin: 10px;
 
 
 .SectionTitles{
-	color: #adadad;
-	font-family: 'Merriweather', serif;
+	color: #ccd1d4;
+	font-family: "Gallient";
 	font-size:60px;
 	text-align: center;
 	margin-top:20%;
 	font-weight: 200;
-	text-decoration:underline;
 
 }
 
 
 .CenteredTitles{
 	color: #545252;
-	font-family: 'Merriweather', serif;
+	font-family: "Gallient";
 	font-size:50px;
 	text-align: center;
 	font-weight: 200;
@@ -273,142 +253,6 @@ margin: 10px;
 	margin-top:15px;
 
 }
-.TitleRow{
-	display:flex;
-	margin-top:40px;
-	margin-bottom:25px;
-	text-decoration:underline;
-	color:#795454;
-	font-family: 'Roboto';
-	font-size:35px;
-	font-weight:600;
-}
-
-#Title1{
-	text-align: -webkit-right;
-	display:block;
-	width:450px;
-	justify-items: center;
-	margin-right:50px;
-}
-#Title2{
-	margin-left:75px;
-}
-
-#Title3{
-	margin-left:150px;
-}
-
-#ProgLang{
-	color:#795454;
-	font-family: 'Poppins', sans-serif;
-	text-align: -webkit-right;
-	font-size:30px;
-	display:block;
-	width:450px;
-	justify-items: center;
-	margin-right:100px;
-}
-
-#tagColumn{
-	margin-left:100px;
-	display:flex;
-}
-
-.tag1{
-	border:3px solid #927d7d;
-	border-radius:10px;
-	background:#ded7cc;
-	font-family: 'Poppins', sans-serif;
-	position:relative;
-	text-align:center;
-	color:#927d7d;
-	width: fit-content;
-	height:fit-content;
-	margin:5px;
-	
-}
-.tag2{
-	border:3px solid #6f6363;
-	border-radius:10px;
-	background:#ded7cc;
-	font-family: 'Poppins', sans-serif;
-	position:relative;
-	text-align:center;
-	color:#6f6363;
-	justify-items:center;
-	width: fit-content;
-	height:fit-content;
-	margin:5px;
-	
-}
-
-.tag3{
-	border:3px solid #795454;
-	border-radius:10px;
-	background:#ded7cc;
-	font-family: 'Poppins', sans-serif;
-	position:relative;
-	text-align:center;
-	color:#795454;
-	justify-items:center;
-	width: fit-content;
-	height:fit-content;
-	margin:5px;
-	
-}
-.blob {
-	background: #795454;
-	border-radius: 50%;
-	margin: 10px;
-	min-height: 20px;
-	min-width: 20px;
-
-	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-	transform: scale(1);
-	animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-	0% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-	}
-
-	70% {
-		transform: scale(1);
-		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-	}
-
-	100% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-	}
-}
-
-
-
-.Emptyblob {
-	
-	border-radius: 50%;
-	margin: 10px;
-	min-height: 20px;
-	min-width: 20px;
-	background:#797d77;
-}
-
-
-
-.blobRow1{
-	display:flex;
-	border-bottom:2px solid #564949;
-	margin-top:10px;
-	margin-bottom:0px;
-
-
-}
-
-
 
 .column{
 	float: left;
@@ -420,30 +264,7 @@ margin: 10px;
 	
 }
 
-
-footer{
-	text-align:center;
-	background-color:#cebebe;
-	color:white;
-	font-family: 'Poppins', sans-serif;
-	justify-content:center;
-}
-
-.footerImg{
-	height: 75px;
-	margin: 15px;
-}
-
-
-
 @media (max-width: 500px){
-	footer{
-		justify-content:center;
-	}
-	.footerImg{
-	height: 25px;
-	margin: 15px;
-	}
 	#HeadingContain{
 		width:100%;
 		height: 275px;
@@ -478,10 +299,8 @@ footer{
 		font-size:45px;
 		margin:0px;
 	}
-	#intro{
-		width:100%;
-		margin:0px 0px 0px 0px;
-	}
+
+
 	#SquareTitle{
 		height:auto;
 		width:auto;
@@ -556,103 +375,6 @@ footer{
 	font-weight:600;
     }
 
-    #Title1{
-	text-align: -webkit-right;
-	display:block;
-	width:50px;
-	justify-items: center;
-	margin-right:50px;
-    }
-	#Title2{
-		margin-left:5%px;
-	}
-
-	#Title3{
-		margin-left:10%px;
-	}
-
-
-
-	#ProgLang{
-		color:#795454;
-		font-family: 'Poppins', sans-serif;
-		text-align: -webkit-right;
-		font-size:20px;
-		display:block;
-		width:50px;
-		justify-items: center;
-		margin-right:100px;
-	}
-    .blob {
-		background: #795454;
-		margin: 5px;
-		height: 20px;
-		width: 20px;
-
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-		transform: scale(1);
-		animation: pulse 2s infinite;
-	}
-	 .Emptyblob {
-		background: #797d77;
-		margin: 5px;
-		height: 20px;
-		width: 20px;
-		margin-left:5%;
-		margin-left:2px;
-	}
-
-    .blobRow1{
-	display:flex;
-	border-bottom:2px solid #564949;
-	margin-bottom:0px;
-	height:100px;
-
-   }
-
-
-	.tag1{
-		border:3px solid #927d7d;
-		border-radius:10px;
-		background:#ded7cc;
-		font-family: 'Poppins', sans-serif;
-		position:relative;
-		text-align:center;
-		color:#927d7d;
-		width: fit-content;
-		height:fit-content;
-		margin:5px;
-
-	}
-	.tag2{
-		border:3px solid #6f6363;
-		border-radius:10px;
-		background:#ded7cc;
-		font-family: 'Poppins', sans-serif;
-		position:relative;
-		text-align:center;
-		color:#6f6363;
-		justify-items:center;
-		width: fit-content;
-		height:fit-content;
-		margin:5px;
-
-	}
-
-	.tag3{
-		border:3px solid #795454;
-		border-radius:10px;
-		background:#ded7cc;
-		font-family: 'Poppins', sans-serif;
-		position:relative;
-		text-align:center;
-		color:#795454;
-		justify-items:center;
-		width: fit-content;
-		height:fit-content;
-		margin:5px;
-
-}
     h3{
     	font-size:12px;
     }
