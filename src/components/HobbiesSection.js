@@ -1,7 +1,7 @@
 import Hobbie from '../components/Hobbie';
 
 export default function HobbiesSection(){
-    return <section id="HobbiesSection">
+    return <section id="HobbiesSection" className="HobbiesSection-container">
     
             <div className="CenteredTitles" id= "Hobbie">
             

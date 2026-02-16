@@ -1,6 +1,3 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
 
 @font-face {
     font-family: 'Gallient';
@@ -51,6 +48,12 @@ a{
 	display: block;
 }
 
+.Intro-section{
+	display:table;
+	width:100%;
+	height: 100vh;
+}
+
 h1{
 	font-family: 'Cormorant Garamond', serif;
 	display:block;
@@ -94,40 +97,54 @@ h1{
 	margin-left: 15%;
 }
 
+.Carousel-container{
+	display:flex;
+	justify-content:center;
+	margin-top: 5%;
+}
+
+.ShowCaseCard-container{
+	position: relative;
+	margin-right: 20px;
+	margin-left: 10%;
+}
+
+.ShowCaseCardImage{
+	height: 400PX;
+	width: 325px;
+	border-radius: 25px;
+}
+
+
+.ShowCaseCard-overlay{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: "Gallient";
+	font-size: 75px;
+	font-weight: 200;
+	color: #ffffff;
+	background-color: rgba(39, 35, 35, 0.59);
+}
+
+
+
+
+.HobbiesSection-container{
+	display:absolute;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
 .HobbiesRow{
 	display:flex;
 	justify-content:center;
 }
 
-.HobbySection{
-	height:auto;
-	overflow:hidden;
-	width: clamp(23ch, 50%, 46ch);
-	margin:10px;
-}
+
 .HobbyImg{
 	height: 90px;
-}
-
-
-.SquareSectionRow{
-	display:flex;
-	height:500px;
-	border-radius: 50%;
-}
-
-#LeftPhoto{
-	background-color: #000000c7;
-	width:50%;
-}
-
-.SectionTitles{
-	color: #adadad;
-	font-family: "Gallient";
-	font-size:60px;
-	text-align: center;
-	margin-top:20%;
-	font-weight: 200;
 }
 
 .CenteredTitles{
@@ -197,12 +214,6 @@ margin: 10px;
 		margin-right:auto;
 		justify-items: center;
 	}
-	
-	h3{
-		font-size:45px;
-		margin:0px;
-	}
-
     .downArrow{
     	width:175px;
     	margin-left:25%;
