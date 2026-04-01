@@ -10,16 +10,6 @@
 	display:none;
 }
 
-.MainTitle{
-	color: #545252;
-	font-family: 'Merriweather', serif;
-	font-size:60px;
-	text-align: center;
-	font-weight: 200;
-	margin-bottom:5%;
-	display:none;
-}
-
 #Title1{
 	color:#4c4c66;
 	font-family: 'Poppins', sans-serif;
@@ -100,7 +90,7 @@
 	
 }
 .blob {
-	background: #795454;
+	background: #592A2A;
 	border-radius: 50%;
 	margin: 10px;
 	min-height: 20px;
@@ -143,7 +133,7 @@
 
 .blobRow1{
 	display:flex;
-	border-bottom:2px solid #564949;
+	border-bottom:2px solid #592A2A;
 	margin:5%;
 	margin-bottom:0px;
 
@@ -211,7 +201,7 @@ footer{
 		margin-right:100px;
 	}
     .blob {
-		background: #795454;
+		background: #592A2A;
 		margin: 5px;
 		height: 20px;
 		width: 20px;

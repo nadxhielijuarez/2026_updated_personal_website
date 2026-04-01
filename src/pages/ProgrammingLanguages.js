@@ -1,13 +1,5 @@
 export default function ProgrammingLanguages() {
     return <div className = "ProgrammingLanguages">
-		<div className="MainTitle">
-					
-					Programming Languages
-					
-
-		</div>
-		
-
 		<div className="progLangGrid">
 		
 		
