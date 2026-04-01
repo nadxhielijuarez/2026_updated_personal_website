@@ -1,16 +1,24 @@
+import {FaBars} from "react-icons/fa";
+import { useRef } from "react";
 import {Link} from "react-router-dom"
 
-
 export default function Navbar() {
-    return <div className="topnav" id="myTopnav">
 
-      <Link to="/home"> Home</Link>    
-        <Link to="/Resume">Resume</Link> 
-        <Link to="/Projects" > My Projects</Link>
-        <Link to="/ProgrammingLanguage">Programming Languages</Link> 
-        <Link to="/LearningBlog">Learning Blog</Link>
-        <a href="javascript:void(0);" className="icon" onclick="myFunction()">
-            <i className="Navbar"></i>  </a>          
-    </div> 
+  const navRef = useRef();
+  const showNavbar = () => {
+    navRef.current.classList.toggle("responsive_nav");  
+  }
+
+  return <div className="topnav" id="myTopnav" ref={navRef}>
+
+    <Link to="/home"> Home</Link>    
+      <Link to="/Resume">Resume</Link> 
+      <Link to="/Projects" > My Projects</Link>
+      <Link to="/ProgrammingLanguage">Programming Languages</Link> 
+      <Link to="/LearningBlog">Learning Blog</Link>
+      <button  className = 'icon' onClick={showNavbar}>
+        <FaBars />
+      </button>   
+  </div> 
 }
 

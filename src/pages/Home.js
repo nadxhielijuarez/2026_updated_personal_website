@@ -1,5 +1,5 @@
 import HobbiesSection from '../components/HobbiesSection';
-import Carousel from '../components/Carousel';
+import Carousel from '../components/CardSection';
 
 import Intro  from '../components/Intro';
 
@@ -7,16 +7,10 @@ export default function Home() {
     return   <div className = "home" >
 
         <Intro/>
-        <div className= "parentDiv">
 
-            <Carousel/>
+        <Carousel/>
 
-            <HobbiesSection/>
-
-
-
-        </div>
-
+        <HobbiesSection/>
      </div>
 
 }
