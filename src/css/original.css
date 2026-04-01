@@ -109,8 +109,12 @@ h1{
 	min-width:0;
 }
 
-.intro{
-	flex:1 1 0;
+.intro-row-650{
+	display:none;
+}
+
+.intro-row{
+	display-flex: row;
 	text-align: left;
 	margin-top:70px;
 	margin-left:50px;
@@ -119,24 +123,18 @@ h1{
 	font-family: 'Roboto';
 }
 
-@media (max-width: 650px) {
-	.Intro-section {
-		flex-direction: row;
-		flex-wrap: nowrap;
-		overflow-x: auto;
+@media(max-width: 650px){
+	.intro-row{
+		display:none;
 	}
-	.intro {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: flex-start;
-		margin-top: 1rem;
-		margin-left: 0.5rem;
-		font-size: 0.95rem;
-	}
-	.Intro-column {
-		flex: 0 0 auto;
-		min-width: 280px;
+	.intro-row-650{
+		display:block;
+		text-align: left;
+		margin-top:70px;
+		margin-left:50px;
+		font-size: large;
+		color:#564949;
+		font-family: 'Roboto';
 	}
 }
 
