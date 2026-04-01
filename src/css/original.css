@@ -68,25 +68,49 @@
 h1{
 	font-family: 'Cormorant Garamond', serif;
 	display:block;
-	font-size:175px;
+	font-size: clamp(2.5rem, 8vw, 10rem);
 	font-weight: 300;
-	line-height: 0px;
-	margin:50px;
-	margin-top:20%;
+	line-height: 1.05;
+	margin: auto 3rem;
+	margin-top: 10%;
+	max-width: 95%;
+}
+
+@media (max-width: 1040px) {
+	h1 {
+		font-size: clamp(2rem, 9vw, 7rem);
+		margin: auto 1.5rem;
+		margin-top: 12%;
+	}
+}
+
+@media (max-width: 600px) {
+	h1 {
+		font-size: clamp(1.6rem, 11vw, 5rem);
+		margin: auto 1rem;
+		margin-top: 15%;
+		line-height: 1.1;
+	}
 }
 
 .Intro-section{
 	display:flex;
 	flex-direction:row;
+	align-items:stretch;
+	gap:1rem;
+}
+
+.Intro-section > * {
+	height:100%;
 }
 
 .Intro-column{
-	flex-gorw: 1;
-	flex-basis:200;
+	flex:1 1 0;
+	min-width:0;
 }
 
 .intro{
-	flex-basis: 20;
+	flex:1 1 0;
 	text-align: left;
 	margin-top:70px;
 	margin-left:50px;
@@ -95,15 +119,60 @@ h1{
 	font-family: 'Roboto';
 }
 
-
-#HeadingContainer{
-	display:table-cell;
-	verticle-align:middle;
-	left: 50px;
-	position:relative;	
-	min-height: 20rem;;
+@media (max-width: 650px) {
+	.Intro-section {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+	}
+	.intro {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		margin-top: 1rem;
+		margin-left: 0.5rem;
+		font-size: 0.95rem;
+	}
+	.Intro-column {
+		flex: 0 0 auto;
+		min-width: 280px;
+	}
 }
 
+
+#HeadingContainer{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:flex-start;
+	gap:1rem;
+	padding:2rem 1rem;
+	margin-left:50px;
+	position:relative;
+	min-height:20rem;
+	width:calc(100% - 100px);
+	box-sizing:border-box;
+}
+
+@media (max-width: 1040px) {
+	#HeadingContainer {
+		margin-left:1rem;
+		padding:1.5rem 1rem;
+		width:calc(100% - 2rem);
+		min-height:15rem;
+	}
+}
+
+@media (max-width: 600px) {
+	#HeadingContainer {
+		margin-left:0.5rem;
+		padding:1rem;
+		width:calc(100% - 1rem);
+		min-height:12rem;
+		align-items:flex-start;
+	}
+}
 
 .IntroImg{
 	flex-grow: 1;
@@ -112,35 +181,40 @@ h1{
 	margin-left: 10%;
 }
 
-.Carousel-container{
+.Row-container{
 	display:flex;
+	flex-wrap:wrap;
 	justify-content:center;
-	margin-top: 5%;
+	gap:1rem;
+	margin: 5% auto;
+	max-width: 1200px;
+	padding: 0 1rem;
 }
 
 .ShowCaseCard-container{
-	flex-grow: 1;
+	flex: 1 1 clamp(220px, 30%, 360px);
 	position: relative;
-	margin-right: 20px;
-	margin-left: 10%;
-	transition: 0.3s;
-	width: 100%;
+	margin: 0.5rem;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+	max-width: 360px;
+	box-sizing: border-box;
 }
 
 .ShowCaseCard-container:hover{
-	opacity: 0.8;
-	height: 410px;
+	opacity: 0.9;
+	transform: translateY(-4px) scale(1.02);
 }
 
 .ShowCaseCardImage{
-	height: 25rem;
-	width: 20rem;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 20 / 25;
 	border-radius: 20px;
+	object-fit: cover;
 }
 
 .ShowCaseCardImage:hover{
-	height: 28rem;
-	width: 22rem;
+	transform: scale(1.03);
 }
 
 .ShowCaseCard-overlay{
@@ -149,108 +223,121 @@ h1{
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-family: "Gallient";
-	font-size: 75px;
+	font-size: clamp(1.8rem, 4vw, 3.5rem);
 	font-weight: 200;
 	color: #ffffff;
 	background-color: rgba(39, 35, 35, 0.64);
 	border-radius: 15px;
+	padding: 0.5rem 1rem;
+	white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+	.ShowCaseCard-container {
+		flex: 1 1 clamp(180px, 45%, 300px);
+		max-width: 300px;
+	}
+	.ShowCaseCard-overlay {
+		font-size: clamp(1.4rem, 4.5vw, 3rem);
+	}
+}
+
+@media (max-width: 600px) {
+	.Row-container{
+		flex-direction:column;
+		align-items:center;
+		gap:1rem;
+		margin: 2rem auto;
+	}
+	.ShowCaseCard-container{
+		flex: 1 1 90%;
+		max-width: 100%;
+		margin: 0.5rem 0;
+	}
+	.ShowCaseCard-overlay {
+		font-size: clamp(1.1rem, 5vw, 2rem);
+	}
 }
 
 
 .HobbiesSection-container{
-	margin-top: 10%;
-	margin-bottom: 10%;
+	margin: 8% auto;
 	width: 100%;
+	max-width: 1200px;
+	padding: 0 1rem;
+	box-sizing: border-box;
 }
 
 .HobbiesRow{
 	display:flex;
-	justify-content:center;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
 }
 
 .HobbyImg{
 	height: 90px;
+	max-width: 100%;
+	object-fit: contain;
 }
 
 .CenteredTitles{
 	color: #545252;
 	font-family: "Gallient";
-	font-size:50px;
+	font-size: clamp(2rem, 4vw, 3.5rem);
 	text-align: center;
 	font-weight: 200;
 }
 
 .HobbySection{
-	margin: 2.5%;;
+	margin: 2.5%;
+	flex: 1 1 clamp(180px, 25%, 300px);
+	min-width: 180px;
+	max-width: 310px;
+	box-sizing: border-box;
 }
 
 .HobbySection-paragraphs{
 	color: rgb(100, 96, 96);
 	font-family: "Quicksand", sans-serif;
-	font-weight:500;
-	font-size: 15px;
+	font-weight: 500;
+	font-size: clamp(0.95rem, 2vw, 1.2rem);
 	margin: 10px;
-	width: 250px;
+	width: auto;
+	max-width: 100%;
 }
-
 
 .SectionTitles{
 	color: #ccd1d4;
 	font-family: "Gallient";
-	font-size:60px;
+	font-size: clamp(2.5rem, 6vw, 4.5rem);
 	text-align: center;
-	margin-top:20%;
+	margin-top: 20%;
 	font-weight: 200;
-
 }
 
-@media (max-width: 500px){
-	.vertical-line{
-	border : 0px;
-	margin:0px;
+@media (max-width: 780px) {
+	.HobbiesRow {
+		flex-direction: column;
+		align-items: center;
 	}
-	h1{
-	    font-family: 'Cormorant Garamond', serif;
-	    position:relative;
-	    font-size:100px;
-	    margin:0px 0px 0px 0px;
-	    line-height:45px;
-	    margin-top:25%;
-	    margin-left:20px;
+	.HobbySection {
+		flex: 1 1 90%;
+		max-width: 90%;
+		margin: 0.5rem 0;
 	}
+}
 
-	h2{
-		font-family: 'Cormorant Garamond', serif;
-		text-align: center;
-		font-size:35px;
-		display:block;
-		margin-left:auto;
-		margin-right:auto;
-		justify-items: center;
+@media (max-width: 500px) {
+	.HobbiesSection-container {
+		margin: 5% auto;
 	}
-    .downArrow{
-    	width:175px;
-    	margin-left:25%;
-
-    }
-
-    .HobbiesRow{
-    	display:block;
-    	margin-left:25%;
-    }
-    .CenteredTitles{
-	font-size:30px;
-    }
+	.HobbyImg {
+		height: 70px;
+	}
+	.SectionTitles {
+		margin-top: 12%;
+	}
 }
 
-.backArrow{
-	height: 50px;
-}
 
-@media (max-width: 1070px){
-
-    h3{
-    	font-size:12px;
-    }
-
-}

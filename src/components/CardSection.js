@@ -7,8 +7,8 @@ import Background4 from '../images/bg4.jpg';
 
 
 
-export default function Carousel() {
-    return <div className="Carousel-container">
+export default function CardRow() {
+    return <div className="Row-container">
 
         <ShowCaseCard
             image={Background1}
